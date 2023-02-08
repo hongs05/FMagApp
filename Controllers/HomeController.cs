@@ -48,7 +48,7 @@ public class HomeController : Controller
         historyFile.Type = Path.GetExtension(file.File.FileName).ToString().Replace('.',' ');
         var url = _uploadHelper.UploadToAzure(file.File);
         historyFile.Size = file.File.Length.ToString();
-        historyFile.Description = "testing";
+        historyFile.Description = file.Name;
         historyFile.Url = url;
         var result = await _cosmosService.AddAsync(historyFile);
 
