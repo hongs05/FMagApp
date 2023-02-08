@@ -4,8 +4,8 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Wellcome To File Manager App </h1>
-    <p>Please SignIn To Manage Your Files.</p>
+    <h1 class="display-4">Welcome To File Manager App </h1>
+   
     @using (Html.BeginForm("SaveFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
